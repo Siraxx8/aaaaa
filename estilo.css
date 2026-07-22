@@ -51,6 +51,8 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
+
+/*TARJETA DE REGISTRO*/
 .register-container{
     width: 100%;
     display: flex;
@@ -65,7 +67,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
@@ -100,7 +102,9 @@ label {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
     width: 100%;
     padding: 12px;
     border: 2px solid #ecf0f1;
@@ -109,9 +113,10 @@ input[type="password"] {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="text"]:focus {
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
     outline: none;
     border-color: var(--secondary);
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
@@ -163,6 +168,30 @@ input:valid:not(:placeholder-shown) {
     transform: scale(0.98);
 }
 
+/*BOTON DE REGISTRAR*/
+.btn-secundary {
+    width: 100%;
+    padding: 12px;
+    background: rgb(107, 107, 107);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-secundary:hover {
+    background: #a3a3a3;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.btn-secundary:active {
+    transform: scale(0.98);
+}
+
 /* ===== FOOTER CON ENLACES ===== */
 footer {
     text-align: center;
@@ -181,12 +210,25 @@ footer a:hover {
     color: #cfcfcf;
     text-decoration: underline;
 }
+legend {
+    margin-left: 20px; 
+    font-weight: bold;
+    color: var(--primary);
+    padding: 0 10px; 
+    margin-bottom: 15px; 
+}
+
+fieldset {
+    padding-top: 0 10px; 
+    
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
     .login-card {
         padding: 25px;
     }
+    
     header h1 {
         font-size: 24px;
     }
