@@ -7,11 +7,11 @@
 
 /* ===== VARIABLES DE COLOR (PALETA PROFESIONAL) ===== */
 :root {
-    --primary: #2c3e50;      /* Azul oscuro - Header, footer */
+    --primary: #142b42;      /* Azul oscuro - Header, footer */
     --secondary: #3498db;    /* Azul brillante - Botones, enlaces */
     --accent: #e74c3c;       /* Rojo - Errores, alertas */
     --success: #2ecc71;      /* Verde - Validación correcta */
-    --light: #ecf0f1;        /* Gris claro - Fondos */
+    --light: #ffffff;        /* Gris claro - Fondos */
     --dark: #1a252f;         /* Casi negro - Texto principal */
     --white: #ffffff;        /* Blanco - Tarjetas, inputs */
     --shadow: rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
 /* ===== ESTILOS GENERALES ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, var(--secondary), #2c3e50);
+    background: linear-gradient(135deg, var(--primary), #069672);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,11 +120,11 @@ input:valid:not(:placeholder-shown) {
     cursor: pointer;
 }
 
-/* ===== BOTÓN ===== */
+/* ===== BOTÓN DE INGRESAR ===== */
 .btn-primary {
     width: 100%;
     padding: 12px;
-    background: var(--secondary);
+    background: rgb(107, 107, 107);
     color: var(--white);
     border: none;
     border-radius: 8px;
@@ -135,12 +135,36 @@ input:valid:not(:placeholder-shown) {
 }
 
 .btn-primary:hover {
-    background: #2980b9;
+    background: #a3a3a3;
     transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
 }
 
 .btn-primary:active {
+    transform: scale(0.98);
+}
+
+/*BOTON DE REGISTRO*/
+.btn-secundary {
+    width: 100%;
+    padding: 12px;
+    background: rgb(107, 107, 107);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-secundary:hover {
+    background: #a0a0a0;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.btn-secundary:active {
     transform: scale(0.98);
 }
 
@@ -151,7 +175,7 @@ footer {
 }
 
 footer a {
-    color: var(--secondary);
+    color: blue;
     text-decoration: none;
     margin: 0 10px;
     font-size: 14px;
@@ -159,7 +183,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #2980b9;
+    color: #00ac9d;
     text-decoration: underline;
 }
 
